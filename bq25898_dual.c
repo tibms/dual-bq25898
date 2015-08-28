@@ -39,8 +39,8 @@ enum bq2589x_vbus_type {
 };
 
 enum bq2589x_part_no {
-	BQ25898  = 0x03,
-	BQ25898D = 0x00,
+	BQ25898  = 0x00,
+	BQ25898D = 0x02,
 };
 
 enum bq2589x_dp_volt {

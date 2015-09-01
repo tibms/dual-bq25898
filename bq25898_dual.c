@@ -40,6 +40,7 @@ enum bq2589x_vbus_type {
 
 enum bq2589x_part_no {
 	BQ25898  = 0x00,
+	BQ25898S = 0x01,
 	BQ25898D = 0x02,
 };
 
@@ -1676,7 +1677,7 @@ static int bq2589x_charger2_probe(struct i2c_client *client,
 	i2c_set_clientdata(client, bq);
 
 	ret = bq2589x_detect_device(bq);
-	if (!ret && bq->part_no == BQ25898) {
+	if (!ret && bq->part_no == BQ25898S) {
 		bq->status |= BQ2589X_STATUS_EXIST;
 		dev_info(bq->dev, "%s: charger device bq25898 detected, revision:%d\n", __func__, bq->revision);
 	} else {
